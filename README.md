@@ -12,6 +12,51 @@ You can run the service directly using npx without installing it:
 npx swaywm-mcp
 ```
 
+### Using Nix
+
+This project provides Nix integration for reproducible development environments and builds.
+
+#### Installing with Nix Flakes (Recommended)
+
+If you have Nix with flakes enabled:
+
+```bash
+# Run directly without installing
+nix run github:cristianoliveira/swaywm-mcp
+
+# Or install to your profile
+nix profile install github:cristianoliveira/swaywm-mcp
+```
+
+#### Using Nix Shell
+
+For a temporary development environment:
+
+```bash
+# Using flakes
+nix develop
+
+# Without flakes
+nix-shell
+```
+
+#### Installing to NixOS System
+
+Add to your configuration.nix:
+
+```nix
+{ pkgs, ... }:
+{
+  # Add flake inputs
+  inputs.swaywm-mcp.url = "github:cristianoliveira/swaywm-mcp";
+  
+  # In your system configuration
+  environment.systemPackages = with pkgs; [
+    inputs.swaywm-mcp.packages.${system}.default
+  ];
+}
+```
+
 ### Local Development
 
 1. Make sure you have Nix installed
