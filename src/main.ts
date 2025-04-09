@@ -5,6 +5,10 @@ import {
 } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
+import { exec } from "child_process";
+import { promisify } from "util";
+import * as sq from "./sway-querier.js";
+import type { SwayNode, SwayOutput, SwayTree } from "./types.d.js";
 
 import type { SwayNode } from "./types.d.js";
 import logger from "./logger.js";
