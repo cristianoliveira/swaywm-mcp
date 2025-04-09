@@ -8,17 +8,14 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { exec } from "child_process";
 import { promisify } from "util";
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
-const { version } = require('../package.json');
 
 const execAsync = promisify(exec);
 
 // Create an MCP server
 const server = new McpServer({
   name: "SwayWM MCP",
-  version,
+ // NOTE: Update ../package.json version when changing this
+  version: '0.0.1',
 });
 
 // Helper function to execute swaymsg commands

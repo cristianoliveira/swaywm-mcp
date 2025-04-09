@@ -155,3 +155,4 @@ node_modules/
 *.sln
 *.sw?
 .cursor
+result
