@@ -30,7 +30,7 @@ async function swaymsg(command: string): Promise<any> {
 }
 
 // Get all workspaces
-server.tool("workspaces", {}, async () => {
+server.tool("workspaces", "Get all workspaces", {}, async () => {
   const workspaces = await swaymsg("-t get_workspaces");
   return {
     content: [{ type: "text", text: JSON.stringify(workspaces, null, 2) }],
@@ -38,7 +38,7 @@ server.tool("workspaces", {}, async () => {
 });
 
 // Get all outputs (monitors)
-server.tool("outputs", {}, async () => {
+server.tool("outputs", "Get all outputs", {}, async () => {
   const outputs = await swaymsg("-t get_outputs");
   return {
     content: [{ type: "text", text: JSON.stringify(outputs, null, 2) }],
@@ -46,7 +46,7 @@ server.tool("outputs", {}, async () => {
 });
 
 // Get all windows
-server.tool("windows", {}, async () => {
+server.tool("windows", "Get all windows", {}, async () => {
   const tree = await swaymsg("-t get_tree");
   return {
     content: [{ type: "text", text: JSON.stringify(tree, null, 2) }],
@@ -54,7 +54,7 @@ server.tool("windows", {}, async () => {
 });
 
 // Get focused window
-server.tool("focused", {}, async () => {
+server.tool("focused", "Get focused window", {}, async () => {
   const focused = await swaymsg("-t get_tree | jq '.. | select(.focused? == true)'");
   return {
     content: [{ type: "text", text: JSON.stringify(focused, null, 2) }],
@@ -62,7 +62,7 @@ server.tool("focused", {}, async () => {
 });
 
 // Get input devices
-server.tool("inputs", {}, async () => {
+server.tool("inputs", "Get all input devices", {}, async () => {
   const inputs = await swaymsg("-t get_inputs");
   return {
     content: [{ type: "text", text: JSON.stringify(inputs, null, 2) }],
@@ -70,7 +70,11 @@ server.tool("inputs", {}, async () => {
 });
 
 // Execute a sway command
-server.tool("execute", { command: z.string() }, async ({ command }) => {
+server.tool("execute", "Execute a sway command", {
+  command: z.string()
+    .describe("The sway command to execute")
+    .default(""),
+}, async ({ command }) => {
   try {
     await swaymsg(command);
     return {
