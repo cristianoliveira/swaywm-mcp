@@ -1,46 +1,25 @@
 #!/usr/bin/env node
-import logger from "./logger.js";
-
 import {
   McpServer,
   ResourceTemplate,
 } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { exec } from "child_process";
-import { promisify } from "util";
+
+import type { SwayNode } from "./types.d.js";
+import logger from "./logger.js";
 import * as sq from "./sway-querier.js";
-import type { SwayNode, SwayOutput, SwayTree } from "./types.d.js";
+import * as swaymsg from "./swaymsg.js";
 
-
-const swaymsgBin = process.env.SWAYMSG_BIN || "swaymsg";
-const execAsync = promisify(exec);
-
-// Create an MCP server
 const server = new McpServer({
   name: "SwayWM MCP",
  // NOTE: Update ../package.json version when changing this
   version: '0.0.2',
 });
 
-// Helper function to execute swaymsg commands
-async function swaymsg<T extends SwayNode | SwayNode[]>(command: string): Promise<T> {
-  logger.debug(`Executing swaymsg command: ${command}`);
-  // Fix issue with sway socket: swaymsg --raw -t get_tree
-  try {
-    // Use the swaymsgBin variable to execute the command
-    const { stdout } = await execAsync(`${swaymsgBin} --raw ${command}`);
-    return JSON.parse(stdout) as T;
-  } catch (error) {
-    logger.error(`Error executing swaymsg ${command}:`, error);
-    console.error(`Error executing swaymsg ${command}:`, error);
-    throw error;
-  }
-}
-
 // Get all workspaces
 server.tool("workspaces", "Get all workspaces", {}, async () => {
-  const workspaces = await swaymsg("-t get_workspaces");
+  const workspaces = await swaymsg.fetchWorkspaces();
   return {
     content: [{ type: "text", text: JSON.stringify(workspaces, null, 2) }],
   };
@@ -48,7 +27,7 @@ server.tool("workspaces", "Get all workspaces", {}, async () => {
 
 // Get all outputs (monitors)
 server.tool("outputs", "Get all outputs", {}, async () => {
-  const outputs = await swaymsg<SwayOutput[]>("-t get_outputs");
+  const outputs = await swaymsg.fetchOutputs();
   return {
     content: [{ type: "text", text: JSON.stringify(outputs, null, 2) }],
   };
@@ -56,7 +35,7 @@ server.tool("outputs", "Get all outputs", {}, async () => {
 
 // Get all windows
 server.tool("windows", "Get all windows", {}, async () => {
-  const tree = await swaymsg<SwayTree>("-t get_tree");
+  const tree = await swaymsg.fetchTree();
   return {
     content: [{ type: "text", text: JSON.stringify(tree, null, 2) }],
   };
@@ -64,7 +43,7 @@ server.tool("windows", "Get all windows", {}, async () => {
 
 // Get focused window
 server.tool("focused", "Get focused window", {}, async () => {
-  const tree = await swaymsg<SwayTree>("-t get_tree");
+  const tree = await swaymsg.fetchTree();
   const focused = sq.find(tree, ({ focused }: SwayNode) => focused);
   return {
     content: [{ type: "text", text: JSON.stringify(focused[0], null, 2) }],
@@ -73,7 +52,7 @@ server.tool("focused", "Get focused window", {}, async () => {
 
 // Get input devices
 server.tool("inputs", "Get all input devices", {}, async () => {
-  const inputs = await swaymsg("-t get_inputs");
+  const inputs = await swaymsg.fetchInputs();
   return {
     content: [{ type: "text", text: JSON.stringify(inputs, null, 2) }],
   };
@@ -86,7 +65,7 @@ server.tool("execute", "Execute a sway command", {
     .default(""),
 }, async ({ command }) => {
   try {
-    await swaymsg(command);
+    await swaymsg.sendCommand(command);
     return {
       content: [{ type: "text", text: `Successfully executed: ${command}` }],
     };
@@ -102,7 +81,7 @@ server.resource(
   "workspace",
   new ResourceTemplate("workspace://{name}", { list: undefined }),
   async (uri, { name }) => {
-    const workspaces = await swaymsg<SwayNode[]>("-t get_workspaces");
+    const workspaces = await swaymsg.fetchWorkspaces();
     const workspace: SwayNode | undefined = workspaces.find((w: SwayNode) => w.name === name);
     
     if (!workspace) {
