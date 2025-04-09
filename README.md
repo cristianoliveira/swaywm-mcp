@@ -4,6 +4,10 @@
 
 This is a Model Context Protocol (MCP) service that provides access to SwayWM window manager data and controls. It allows you to query and interact with your SwayWM environment through using an LLM and MCP client (cursor/claude desktop/copilotMCP/etc)
 
+## Classic DEMO
+
+![demo](https://github.com/cristianoliveira/swaywm-mcp/blob/main/demo.gif)
+
 ## Installation
 
 ### Using npx (Recommended/no installation required)
