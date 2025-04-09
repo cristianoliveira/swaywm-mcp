@@ -10,6 +10,7 @@ import { z } from "zod";
 import { exec } from "child_process";
 import { promisify } from "util";
 import { find } from "./sway-querier.js";
+import type { SwayNode, SwayOutput, SwayTree } from "./types.js";
 
 
 const swaymsgBin = process.env.SWAYMSG_BIN || "swaymsg";
@@ -23,13 +24,13 @@ const server = new McpServer({
 });
 
 // Helper function to execute swaymsg commands
-async function swaymsg(command: string): Promise<any> {
+async function swaymsg<T extends SwayNode | SwayNode[]>(command: string): Promise<T> {
   logger.debug(`Executing swaymsg command: ${command}`);
   // Fix issue with sway socket: swaymsg --raw -t get_tree
   try {
     // Use the swaymsgBin variable to execute the command
     const { stdout } = await execAsync(`${swaymsgBin} --raw ${command}`);
-    return JSON.parse(stdout);
+    return JSON.parse(stdout) as T;
   } catch (error) {
     logger.error(`Error executing swaymsg ${command}:`, error);
     console.error(`Error executing swaymsg ${command}:`, error);
@@ -47,7 +48,7 @@ server.tool("workspaces", "Get all workspaces", {}, async () => {
 
 // Get all outputs (monitors)
 server.tool("outputs", "Get all outputs", {}, async () => {
-  const outputs = await swaymsg("-t get_outputs");
+  const outputs = await swaymsg<SwayOutput[]>("-t get_outputs");
   return {
     content: [{ type: "text", text: JSON.stringify(outputs, null, 2) }],
   };
@@ -55,7 +56,7 @@ server.tool("outputs", "Get all outputs", {}, async () => {
 
 // Get all windows
 server.tool("windows", "Get all windows", {}, async () => {
-  const tree = await swaymsg("-t get_tree");
+  const tree = await swaymsg<SwayTree>("-t get_tree");
   return {
     content: [{ type: "text", text: JSON.stringify(tree, null, 2) }],
   };
@@ -63,8 +64,8 @@ server.tool("windows", "Get all windows", {}, async () => {
 
 // Get focused window
 server.tool("focused", "Get focused window", {}, async () => {
-  const tree = await swaymsg("-t get_tree");
-  const focused = find(tree, (node: any) => {
+  const tree = await swaymsg<SwayTree>("-t get_tree");
+  const focused = find(tree, (node: SwayNode) => {
     return node.focused
   });
   return {
@@ -103,8 +104,8 @@ server.resource(
   "workspace",
   new ResourceTemplate("workspace://{name}", { list: undefined }),
   async (uri, { name }) => {
-    const workspaces = await swaymsg("-t get_workspaces");
-    const workspace = workspaces.find((w: any) => w.name === name);
+    const workspaces = await swaymsg<SwayNode[]>("-t get_workspaces");
+    const workspace: SwayNode | undefined = workspaces.find((w: SwayNode) => w.name === name);
     
     if (!workspace) {
       return {

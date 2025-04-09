@@ -1,9 +1,8 @@
-// This module contains a function to query swayWM objects in a tree structure.
-// 
-// FIXME: add missing types
+import type { SwayNode } from "./types.js";
+
 // FIXME: add missing docstring
-export const find = (node: any, predicate: (node: any) => boolean): any[] => {
-    const result: any[] = [];
+export const find = (node: SwayNode, predicate: (node: SwayNode) => boolean): SwayNode[] => {
+    const result: SwayNode[] = [];
     if (predicate(node)) {
         result.push(node);
     }
@@ -14,4 +13,3 @@ export const find = (node: any, predicate: (node: any) => boolean): any[] => {
     }
     return result;
 }
-

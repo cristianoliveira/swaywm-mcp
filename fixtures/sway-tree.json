@@ -1,0 +1,977 @@
+{
+  "id": 101,
+  "type": "root",
+  "orientation": "horizontal",
+  "percent": null,
+  "urgent": false,
+  "marks": [],
+  "focused": false,
+  "layout": "splith",
+  "border": "none",
+  "current_border_width": 0,
+  "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1200
+  },
+  "deco_rect": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "window_rect": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "geometry": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "name": "root",
+  "window": null,
+  "nodes": [
+    {
+      "id": 2147484600,
+      "type": "output",
+      "orientation": "horizontal",
+      "percent": null,
+      "urgent": false,
+      "marks": [],
+      "focused": false,
+      "layout": "output",
+      "border": "none",
+      "current_border_width": 0,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1200
+      },
+      "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "name": "__i3",
+      "window": null,
+      "nodes": [
+        {
+          "id": 2147484601,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1200
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "__i3_scratch",
+          "window": null,
+          "nodes": [],
+          "floating_nodes": [],
+          "focus": [],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null
+        }
+      ],
+      "floating_nodes": [],
+      "focus": [
+        2147484601
+      ],
+      "fullscreen_mode": 0,
+      "sticky": false,
+      "floating": null,
+      "scratchpad_state": null
+    },
+    {
+      "id": 104,
+      "type": "output",
+      "orientation": "none",
+      "percent": 1.0,
+      "urgent": false,
+      "marks": [],
+      "focused": false,
+      "layout": "output",
+      "border": "none",
+      "current_border_width": 0,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1200
+      },
+      "deco_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "window_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "name": "eDP-1",
+      "window": null,
+      "nodes": [
+        {
+          "id": 58,
+          "type": "workspace",
+          "orientation": "vertical",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splitv",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1200
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "1",
+          "window": null,
+          "nodes": [
+            {
+              "id": 56,
+              "type": "con",
+              "orientation": "none",
+              "percent": 1.0,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "none",
+              "border": "pixel",
+              "current_border_width": 1,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1200
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 1,
+                "y": 1,
+                "width": 1918,
+                "height": 1198
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 1918,
+                "height": 1078
+              },
+              "name": "GitHub - Firefox",
+              "window": 26777257,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "floating": "auto_off",
+              "scratchpad_state": "none",
+              "pid": 22237,
+              "app_id": null,
+              "visible": false,
+              "max_render_time": 0,
+              "allow_tearing": false,
+              "shell": "xwayland",
+              "inhibit_idle": false,
+              "idle_inhibitors": {
+                "user": "fullscreen",
+                "application": "none"
+              },
+              "window_properties": {
+                "class": "Firefox",
+                "instance": "firefox",
+                "title": "GitHub - Firefox",
+                "transient_for": null,
+                "window_role": "browser",
+                "window_type": "normal"
+              }
+            }
+          ],
+          "floating_nodes": [],
+          "focus": [
+            56
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null,
+          "num": 1,
+          "output": "eDP-1",
+          "representation": "V[Firefox]"
+        },
+        {
+          "id": 16,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1200
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "2",
+          "window": null,
+          "nodes": [
+            {
+              "id": 250,
+              "type": "con",
+              "orientation": "none",
+              "percent": 1.0,
+              "urgent": false,
+              "marks": [],
+              "focused": true,
+              "layout": "none",
+              "border": "pixel",
+              "current_border_width": 1,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1200
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 1,
+                "y": 1,
+                "width": 1918,
+                "height": 1198
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 1338,
+                "height": 688
+              },
+              "name": "Terminal",
+              "window": null,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "floating": "auto_off",
+              "scratchpad_state": "none",
+              "pid": 57621,
+              "app_id": "terminal",
+              "visible": true,
+              "max_render_time": 0,
+              "allow_tearing": false,
+              "shell": "xdg_shell",
+              "inhibit_idle": false,
+              "idle_inhibitors": {
+                "user": "fullscreen",
+                "application": "none"
+              }
+            }
+          ],
+          "floating_nodes": [],
+          "focus": [
+            250
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null,
+          "num": 2,
+          "output": "eDP-1",
+          "representation": "H[terminal]"
+        },
+        {
+          "id": 196,
+          "type": "workspace",
+          "orientation": "vertical",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splitv",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1200
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "3",
+          "window": null,
+          "nodes": [
+            {
+              "id": 194,
+              "type": "con",
+              "orientation": "none",
+              "percent": 1.0,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "none",
+              "border": "pixel",
+              "current_border_width": 1,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1200
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 1,
+                "y": 1,
+                "width": 1918,
+                "height": 1198
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 1918,
+                "height": 1078
+              },
+              "name": "project\/main - Firefox",
+              "window": 26777292,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "floating": "auto_off",
+              "scratchpad_state": "none",
+              "pid": 22237,
+              "app_id": null,
+              "visible": false,
+              "max_render_time": 0,
+              "allow_tearing": false,
+              "shell": "xwayland",
+              "inhibit_idle": false,
+              "idle_inhibitors": {
+                "user": "fullscreen",
+                "application": "none"
+              },
+              "window_properties": {
+                "class": "Firefox",
+                "instance": "firefox",
+                "title": "project\/main - Firefox",
+                "transient_for": null,
+                "window_role": "browser",
+                "window_type": "normal"
+              }
+            }
+          ],
+          "floating_nodes": [],
+          "focus": [
+            194
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null,
+          "num": 3,
+          "output": "eDP-1",
+          "representation": "V[Firefox]"
+        },
+        {
+          "id": 210,
+          "type": "workspace",
+          "orientation": "horizontal",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splith",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1200
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "4",
+          "window": null,
+          "nodes": [
+            {
+              "id": 209,
+              "type": "con",
+              "orientation": "none",
+              "percent": 1.0,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "none",
+              "border": "pixel",
+              "current_border_width": 1,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1200
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 1,
+                "y": 1,
+                "width": 1918,
+                "height": 1198
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 945,
+                "height": 1180
+              },
+              "name": "ChatBot - work process",
+              "window": 26777296,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "floating": "auto_off",
+              "scratchpad_state": "none",
+              "pid": 22237,
+              "app_id": null,
+              "visible": false,
+              "max_render_time": 0,
+              "allow_tearing": false,
+              "shell": "xwayland",
+              "inhibit_idle": false,
+              "idle_inhibitors": {
+                "user": "fullscreen",
+                "application": "none"
+              },
+              "window_properties": {
+                "class": "Firefox",
+                "instance": "chat.openai.com",
+                "title": "ChatBot - work process",
+                "transient_for": null,
+                "window_role": "pop-up",
+                "window_type": "normal"
+              }
+            }
+          ],
+          "floating_nodes": [],
+          "focus": [
+            209
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null,
+          "num": 4,
+          "output": "eDP-1",
+          "representation": "H[Firefox]"
+        },
+        {
+          "id": 257,
+          "type": "workspace",
+          "orientation": "vertical",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splitv",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1200
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "7",
+          "window": null,
+          "nodes": [
+            {
+              "id": 252,
+              "type": "con",
+              "orientation": "none",
+              "percent": 1.0,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "none",
+              "border": "pixel",
+              "current_border_width": 1,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1200
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 1,
+                "y": 1,
+                "width": 1918,
+                "height": 1198
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 945,
+                "height": 1180
+              },
+              "name": "Trader",
+              "window": 26777317,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "floating": "auto_off",
+              "scratchpad_state": "none",
+              "pid": 22237,
+              "app_id": null,
+              "visible": false,
+              "max_render_time": 0,
+              "allow_tearing": false,
+              "shell": "xwayland",
+              "inhibit_idle": false,
+              "idle_inhibitors": {
+                "user": "fullscreen",
+                "application": "none"
+              },
+              "window_properties": {
+                "class": "Firefox",
+                "instance": "www.trader.com",
+                "title": "Trader",
+                "transient_for": null,
+                "window_role": "pop-up",
+                "window_type": "normal"
+              }
+            }
+          ],
+          "floating_nodes": [],
+          "focus": [
+            252
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null,
+          "num": 7,
+          "output": "eDP-1",
+          "representation": "V[Firefox]"
+        },
+        {
+          "id": 262,
+          "type": "workspace",
+          "orientation": "vertical",
+          "percent": null,
+          "urgent": false,
+          "marks": [],
+          "focused": false,
+          "layout": "splitv",
+          "border": "none",
+          "current_border_width": 0,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1200
+          },
+          "deco_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "window_rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "name": "9",
+          "window": null,
+          "nodes": [
+            {
+              "id": 264,
+              "type": "con",
+              "orientation": "none",
+              "percent": 1.0,
+              "urgent": false,
+              "marks": [],
+              "focused": false,
+              "layout": "none",
+              "border": "pixel",
+              "current_border_width": 1,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1200
+              },
+              "deco_rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "window_rect": {
+                "x": 1,
+                "y": 1,
+                "width": 1918,
+                "height": 1198
+              },
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 945,
+                "height": 1180
+              },
+              "name": "Market update email - n.email@example.com - Firefox",
+              "window": 26777353,
+              "nodes": [],
+              "floating_nodes": [],
+              "focus": [],
+              "fullscreen_mode": 0,
+              "sticky": false,
+              "floating": "auto_off",
+              "scratchpad_state": "none",
+              "pid": 22237,
+              "app_id": null,
+              "visible": false,
+              "max_render_time": 0,
+              "allow_tearing": false,
+              "shell": "xwayland",
+              "inhibit_idle": false,
+              "idle_inhibitors": {
+                "user": "fullscreen",
+                "application": "none"
+              },
+              "window_properties": {
+                "class": "Firefox",
+                "instance": "mail.example.com__mail_u_0",
+                "title": "Market update email - n.email@example.com - Firefox",
+                "transient_for": null,
+                "window_role": "pop-up",
+                "window_type": "normal"
+              }
+            }
+          ],
+          "floating_nodes": [],
+          "focus": [
+            264
+          ],
+          "fullscreen_mode": 1,
+          "sticky": false,
+          "floating": null,
+          "scratchpad_state": null,
+          "num": 9,
+          "output": "eDP-1",
+          "representation": "V[Firefox]"
+        }
+      ],
+      "floating_nodes": [],
+      "focus": [
+        16,
+        58,
+        262,
+        196,
+        257,
+        210
+      ],
+      "fullscreen_mode": 0,
+      "sticky": false,
+      "floating": null,
+      "scratchpad_state": null,
+      "primary": false,
+      "make": "Tech University",
+      "model": "0x1456",
+      "serial": "Unknown",
+      "modes": [
+        {
+          "width": 1920,
+          "height": 1200,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1920,
+          "height": 1200,
+          "refresh": 50009,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1920,
+          "height": 1200,
+          "refresh": 48018,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1600,
+          "height": 1200,
+          "refresh": 60000,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1680,
+          "height": 1050,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1280,
+          "height": 1024,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1280,
+          "height": 800,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 800,
+          "height": 600,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        },
+        {
+          "width": 640,
+          "height": 480,
+          "refresh": 60003,
+          "picture_aspect_ratio": "none"
+        }
+      ],
+      "non_desktop": false,
+      "active": true,
+      "dpms": true,
+      "power": true,
+      "scale": 1.0,
+      "scale_filter": "nearest",
+      "transform": "normal",
+      "adaptive_sync_status": "disabled",
+      "current_workspace": "2",
+      "current_mode": {
+        "width": 1920,
+        "height": 1200,
+        "refresh": 60003,
+        "picture_aspect_ratio": "none"
+      },
+      "max_render_time": 0,
+      "allow_tearing": false
+    }
+  ],
+  "floating_nodes": [],
+  "focus": [
+    104
+  ],
+  "fullscreen_mode": 0,
+  "sticky": false,
+  "floating": null,
+  "scratchpad_state": null
+}
