@@ -22,11 +22,11 @@ npx swaywm-mcp
    ```
 4. Install dependencies:
    ```bash
-   pnpm install
+   npm install
    ```
 5. Build the project:
    ```bash
-   pnpm build
+   npm run build
    ```
 
 ## Usage Examples
@@ -42,7 +42,7 @@ npx swaywm-mcp
 
 #### 2. Development Mode
 ```bash
-pnpm dev
+npm run dev
 ```
 
 #### 3. Production Mode (Using Built Version)
@@ -220,8 +220,8 @@ To use this MCP service with clients that support the Model Context Protocol (li
 ```json
 {
   "name": "SwayWM",
-  "command": "pnpm",
-  "args": ["dev"],
+  "command": "npm",
+  "args": ["run", "dev"],
   "cwd": "/path/to/swaywm-mcp"
 }
 ```
@@ -248,7 +248,7 @@ For other clients that support MCP, you'll need to configure them to use either:
 3. Use stdio for communication
 
 #### Development Mode
-1. Execute the command: `pnpm dev`
+1. Execute the command: `npm run dev`
 2. In the working directory: `/path/to/swaywm-mcp`
 3. Use stdio for communication
 
@@ -287,7 +287,7 @@ To modify or extend this service:
 1. The main implementation is in `src/main.ts`
 2. Add new tools using `server.tool()`
 3. Add new resources using `server.resource()`
-4. Rebuild using `pnpm build`
+4. Rebuild using `npm run build`
 
 ## Requirements
 

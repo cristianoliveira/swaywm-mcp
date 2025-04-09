@@ -28,7 +28,7 @@
         devShell = pkgs.mkShell {
           packages = with pkgs; [
             nodejs
-            nodePackages.pnpm
+
             jq
             sway
 

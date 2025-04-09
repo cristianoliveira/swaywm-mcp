@@ -2,7 +2,7 @@
 
 pkgs.buildNpmPackage {
   pname = "swaywm-mcp";
-  version = "0.1.0";
+  version = "0.0.1";
   
   src = ./.;
   
@@ -10,13 +10,7 @@ pkgs.buildNpmPackage {
   
   nativeBuildInputs = [
     pkgs.nodejs
-    pkgs.nodePackages.pnpm
   ];
-
-  postPatch = ''
-    # Generate the package-lock.json file
-    ${pkgs.nodePackages.pnpm}/bin/pnpm install --frozen-lockfile
-  '';
 
   installPhase = ''
     mkdir -p $out/bin
