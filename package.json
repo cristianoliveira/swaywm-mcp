@@ -1,0 +1,39 @@
+{
+  "name": "swaywm-mcp",
+  "version": "1.0.0",
+  "description": "Swaywm MCP service",
+  "type": "module",
+  "bin": {
+    "swaywm-mcp": "./dist/main.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/main.ts",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.9.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.1",
+    "typescript": "5.8",
+    "@types/node": "^22.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "sway",
+    "swaywm",
+    "mcp",
+    "model-context-protocol",
+    "window-manager"
+  ],
+  "author": "",
+  "license": "MIT"
+} 
