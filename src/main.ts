@@ -11,6 +11,8 @@ import { exec } from "child_process";
 import { promisify } from "util";
 import { find } from "./sway-querier.js";
 
+
+const swaymsgBin = process.env.SWAYMSG_BIN || "swaymsg";
 const execAsync = promisify(exec);
 
 // Create an MCP server
@@ -23,8 +25,10 @@ const server = new McpServer({
 // Helper function to execute swaymsg commands
 async function swaymsg(command: string): Promise<any> {
   logger.debug(`Executing swaymsg command: ${command}`);
+  // Fix issue with sway socket: swaymsg --raw -t get_tree
   try {
-    const { stdout } = await execAsync(`swaymsg --raw ${command}`);
+    // Use the swaymsgBin variable to execute the command
+    const { stdout } = await execAsync(`${swaymsgBin} --raw ${command}`);
     return JSON.parse(stdout);
   } catch (error) {
     logger.error(`Error executing swaymsg ${command}:`, error);

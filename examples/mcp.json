@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "swaywm-mcp": {
+        "command": "npx",
+        "args": ["swaywm-mcp"],
+        "env": {
+          "SWAYMSG_BIN": "/path/to/bin/swaymsg",
+          "SWAYSOCK": "/run/user/<var>/sway-ipc.<var>.<var>.sock"
+        }
+    }
+  }
+}
