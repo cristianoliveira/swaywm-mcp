@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import logger from "./logger.js";
 
 import {
   McpServer,
@@ -20,10 +21,12 @@ const server = new McpServer({
 
 // Helper function to execute swaymsg commands
 async function swaymsg(command: string): Promise<any> {
+  logger.debug(`Executing swaymsg command: ${command}`);
   try {
     const { stdout } = await execAsync(`swaymsg ${command}`);
     return JSON.parse(stdout);
   } catch (error) {
+    logger.error(`Error executing swaymsg ${command}:`, error);
     console.error(`Error executing swaymsg ${command}:`, error);
     throw error;
   }
@@ -116,6 +119,8 @@ server.resource(
     };
   }
 );
+
+logger.info("SwayWM MCP server started");
 
 // Start receiving messages on stdin and sending messages on stdout
 const transport = new StdioServerTransport();
