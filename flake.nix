@@ -15,8 +15,16 @@
             allowUnfree = true;
           };
         };
+        swaywmMcp = pkgs.callPackage ./default.nix {
+          inherit pkgs;
+        };
       in
       {
+        packages = {
+          default = swaywmMcp;
+          swaywm-mcp = swaywmMcp;
+        };
+        
         devShell = pkgs.mkShell {
           packages = with pkgs; [
             nodejs
@@ -26,6 +34,9 @@
 
             # AI stuff
             code-cursor
+
+            # NOTE: uncomment to use swaywm-mcp 
+            # swaywmMcp
           ];
         };
       }
