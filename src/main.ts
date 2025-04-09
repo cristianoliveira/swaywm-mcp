@@ -24,7 +24,7 @@ const server = new McpServer({
 async function swaymsg(command: string): Promise<any> {
   logger.debug(`Executing swaymsg command: ${command}`);
   try {
-    const { stdout } = await execAsync(`swaymsg ${command}`);
+    const { stdout } = await execAsync(`swaymsg --raw ${command}`);
     return JSON.parse(stdout);
   } catch (error) {
     logger.error(`Error executing swaymsg ${command}:`, error);
