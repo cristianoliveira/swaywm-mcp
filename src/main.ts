@@ -9,8 +9,8 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { exec } from "child_process";
 import { promisify } from "util";
-import { find } from "./sway-querier.js";
-import type { SwayNode, SwayOutput, SwayTree } from "./types.js";
+import * as sq from "./sway-querier.js";
+import type { SwayNode, SwayOutput, SwayTree } from "./types.d.js";
 
 
 const swaymsgBin = process.env.SWAYMSG_BIN || "swaymsg";
@@ -65,9 +65,7 @@ server.tool("windows", "Get all windows", {}, async () => {
 // Get focused window
 server.tool("focused", "Get focused window", {}, async () => {
   const tree = await swaymsg<SwayTree>("-t get_tree");
-  const focused = find(tree, (node: SwayNode) => {
-    return node.focused
-  });
+  const focused = sq.find(tree, ({ focused }: SwayNode) => focused);
   return {
     content: [{ type: "text", text: JSON.stringify(focused[0], null, 2) }],
   };
