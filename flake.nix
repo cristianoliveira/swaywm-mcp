@@ -27,8 +27,10 @@
         
         devShell = pkgs.mkShell {
           packages = with pkgs; [
+            # Project dependencies
             nodejs
 
+            # Dev dependencies
             jq
             sway
 

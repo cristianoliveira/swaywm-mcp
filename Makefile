@@ -7,3 +7,8 @@ help: ## Lists the available commands. Add a comment with '##' to describe a com
 .PHONY: nix-build
 nix-build: ## Builds the project using Nix.
 	nix build .#
+
+.PHONY: tail-logs
+tail-logs: ## Tails the logs of the SwayWM MCP.
+	@echo "Tailing logs..."
+	tail -f /tmp/swaywm-mcp.log

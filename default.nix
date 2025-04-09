@@ -20,8 +20,6 @@ pkgs.buildNpmPackage {
     ln -s $out/bin/main.js $out/bin/swaywm-mcp
   '';
   
-  makeWrapperArgs = ["--prefix PATH : ${pkgs.lib.makeBinPath [pkgs.jq]}"];
-  
   meta = with pkgs.lib; {
     description = "Swaywm MCP service";
     homepage = "https://github.com/cristianoliveira/swaywm-mcp";

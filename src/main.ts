@@ -9,6 +9,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { exec } from "child_process";
 import { promisify } from "util";
+import { find } from "./sway-querier.js";
 
 const execAsync = promisify(exec);
 
@@ -58,9 +59,12 @@ server.tool("windows", "Get all windows", {}, async () => {
 
 // Get focused window
 server.tool("focused", "Get focused window", {}, async () => {
-  const focused = await swaymsg("-t get_tree | jq '.. | select(.focused? == true)'");
+  const tree = await swaymsg("-t get_tree");
+  const focused = find(tree, (node: any) => {
+    return node.focused
+  });
   return {
-    content: [{ type: "text", text: JSON.stringify(focused, null, 2) }],
+    content: [{ type: "text", text: JSON.stringify(focused[0], null, 2) }],
   };
 });
 
