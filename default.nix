@@ -6,7 +6,7 @@ pkgs.buildNpmPackage {
   
   src = ./.;
   
-  npmDepsHash = "sha256-u57Bekw5PJ/GFDxBKlRSQAaLVyLHigg1Z4ZerJpnjCA=";
+  npmDepsHash = "sha256-KNhFVFsxQUrvuVMiEUwrFth6mf33E8NTu5tf2MdheT8=";
   
   nativeBuildInputs = [
     pkgs.nodejs
