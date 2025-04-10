@@ -1,6 +1,6 @@
 {
   "name": "swaywm-mcp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Swaywm MCP service",
   "type": "module",
   "bin": {

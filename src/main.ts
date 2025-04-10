@@ -20,7 +20,7 @@ const execAsync = promisify(exec);
 const server = new McpServer({
   name: "SwayWM MCP",
  // NOTE: Update ../package.json version when changing this
-  version: '0.0.1',
+  version: '0.0.2',
 });
 
 // Helper function to execute swaymsg commands
